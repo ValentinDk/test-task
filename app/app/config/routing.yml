@@ -1,0 +1,11 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+main:
+    path: /
+    controller: AppBundle:Main:index
+
+request:
+    path: /api/v1/room/enter
+    controller: AppBundle:Main:getResponse

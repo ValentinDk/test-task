@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    image: php:7.2-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/var/www/html
+      - ./apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+
+###Build the app with the updated Compose file, and run it.###
+###docker-compose up --build###
+
+###Start the web-socket server.###
+###bin\console ws:star###
